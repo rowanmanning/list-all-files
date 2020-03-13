@@ -1,0 +1,36 @@
+{
+  "name": "@rowanmanning/list-all-files",
+  "version": "0.0.0",
+  "description": "List all files in a directory",
+  "keywords": [
+    "fs",
+    "list",
+    "readdir"
+  ],
+  "author": "Rowan Manning (https://rowanmanning.com/)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rowanmanning/list-all-files.git"
+  },
+  "homepage": "https://github.com/rowanmanning/list-all-files",
+  "bugs": "https://github.com/rowanmanning/list-all-files/issues",
+  "license": "MIT",
+  "engines": {
+    "node": ">=12",
+    "npm": ">=6.9.0"
+  },
+  "devDependencies": {
+    "@rowanmanning/eslint-config": "^2.1.0",
+    "@rowanmanning/make": "^1.2.0",
+    "eslint": "^6.8.0",
+    "mocha": "^6.2.1",
+    "mockery": "^2.1.0",
+    "nyc": "^14.1.1",
+    "proclaim": "^3.6.0",
+    "sinon": "^9.0.1"
+  },
+  "main": "./lib/index.js",
+  "scripts": {
+    "test": "make ci"
+  }
+}
