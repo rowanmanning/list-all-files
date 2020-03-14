@@ -21,11 +21,11 @@
   },
   "devDependencies": {
     "@rowanmanning/eslint-config": "^2.1.0",
-    "@rowanmanning/make": "^1.2.0",
+    "@rowanmanning/make": "^2.0.0",
     "eslint": "^6.8.0",
-    "mocha": "^6.2.1",
+    "mocha": "^7.1.0",
     "mockery": "^2.1.0",
-    "nyc": "^14.1.1",
+    "nyc": "^15.0.0",
     "proclaim": "^3.6.0",
     "sinon": "^9.0.1"
   },
