@@ -29,7 +29,6 @@
     "proclaim": "^3.6.0",
     "sinon": "^9.0.1"
   },
-  "main": "./lib/index.js",
   "scripts": {
     "test": "make ci"
   }
