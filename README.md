@@ -55,7 +55,7 @@ const files = await listAllFiles('./directory-path');
 List all files in a directory synchronously:
 
 ```js
-const files = listAllFiles('./directory-path');
+const files = listAllFiles.sync('./directory-path');
 // files is an array of strings, each being the path to a file
 ```
 
