@@ -36,6 +36,7 @@
   },
   "main": "lib/list-all-files.js",
   "nyc": {
+    "eager": true,
     "reporter": [
       "html",
       "text"
