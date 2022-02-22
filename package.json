@@ -16,20 +16,32 @@
   "bugs": "https://github.com/rowanmanning/list-all-files/issues",
   "license": "MIT",
   "engines": {
-    "node": ">=12",
-    "npm": ">=6.9.0"
-  },
-  "devDependencies": {
-    "@rowanmanning/eslint-config": "^2.1.0",
-    "@rowanmanning/make": "^2.0.0",
-    "eslint": "^6.8.0",
-    "mocha": "^7.1.0",
-    "mockery": "^2.1.0",
-    "nyc": "^15.0.0",
-    "proclaim": "^3.6.0",
-    "sinon": "^9.0.1"
+    "node": ">=14",
+    "npm": ">=7"
   },
   "scripts": {
-    "test": "make ci"
+    "test": "npm run test:coverage && npm run test:integration",
+    "verify": "eslint .",
+    "test:unit": "mocha 'test/unit/**/*.test.js'",
+    "test:coverage": "nyc npm run test:unit",
+    "test:integration": "mocha 'test/integration/**/*.test.js'"
+  },
+  "devDependencies": {
+    "@rowanmanning/eslint-config": "^3.2.1",
+    "chai": "^4.3.6",
+    "eslint": "^8.9.0",
+    "mocha": "^9.2.1",
+    "nyc": "^15.1.0",
+    "testdouble": "^3.16.4"
+  },
+  "main": "lib/list-all-files.js",
+  "nyc": {
+    "reporter": [
+      "html",
+      "text"
+    ]
+  },
+  "mocha": {
+    "timeout": 10000
   }
 }
