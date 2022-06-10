@@ -104,7 +104,14 @@ describe('lib/list-all-files', () => {
 
 });
 
-// There's probably a better way of doing this
+/**
+ * Create a mock file system. There's probably a better way of doing this.
+ *
+ * @param {import('fs')} fs
+ *     The file system module.
+ * @param {import('fs/promises')} fsPromises
+ *     The promise-based file system module.
+ */
 function createMockFileSystem(fs, fsPromises) {
 	const mockDirectory1 = [
 		'mock-subdir-1',
@@ -148,6 +155,16 @@ function createMockFileSystem(fs, fsPromises) {
 	td.when(fs.statSync('mock-dir/mock-subdir-1/mock-subdir-2/mock-file-4')).thenReturn(createMockStat(false, true));
 }
 
+/**
+ * Create a mock file system stat object.
+ *
+ * @param {boolean} isDirectory
+ *     Whether the stat should represent a directory.
+ * @param {boolean} isFile
+ *     Whether the stat should represent a file.
+ * @returns {{isDirectory: Function, isFile: Function}}
+ *     Returns a mock stat object.
+ */
 function createMockStat(isDirectory, isFile) {
 	const isDirectoryFn = td.function();
 	const isFileFn = td.function();
