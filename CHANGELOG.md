@@ -1,5 +1,21 @@
 # Changelog
 
+## [2.2.0](https://github.com/rowanmanning/list-all-files/compare/v2.1.1...v2.2.0) (2022-06-10)
+
+
+### Features
+
+* ensure typescript types are always valid ([6ad39ef](https://github.com/rowanmanning/list-all-files/commit/6ad39ef6946088865ebafe4b1c865cb493f64018))
+
+
+### Miscellaneous
+
+* bump @commitlint/cli from 17.0.1 to 17.0.2 ([676556c](https://github.com/rowanmanning/list-all-files/commit/676556cfb101af6993f6ed0c632ca0495b148308))
+* bump @commitlint/config-conventional from 17.0.0 to 17.0.2 ([e58436f](https://github.com/rowanmanning/list-all-files/commit/e58436f3466bba6299c06dae09fb09c5b345f86a))
+* bump @rowanmanning/eslint-config from 3.5.0 to 4.0.2 ([eb5c8f6](https://github.com/rowanmanning/list-all-files/commit/eb5c8f6842a45619cba5ef6d69fe4191ffde77a5))
+* bump eslint from 8.16.0 to 8.17.0 ([d18171a](https://github.com/rowanmanning/list-all-files/commit/d18171a076e5c1054a4a0f869da2db29655f7396))
+* fix eslint issues ([320fa10](https://github.com/rowanmanning/list-all-files/commit/320fa10ea3bbb85247d985e4155d5000a7a5efe7))
+
 ### [2.1.1](https://github.com/rowanmanning/list-all-files/compare/v2.1.0...v2.1.1) (2022-05-25)
 
 
