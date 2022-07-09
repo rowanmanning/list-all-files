@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.2.1](https://github.com/rowanmanning/list-all-files/compare/v2.2.0...v2.2.1) (2022-07-09)
+
+
+### Bug Fixes
+
+* hide the misc changelog section ([5ed569f](https://github.com/rowanmanning/list-all-files/commit/5ed569f14276f864bf91245cba5d424f8f70a9e4))
+
 ## [2.2.0](https://github.com/rowanmanning/list-all-files/compare/v2.1.1...v2.2.0) (2022-06-10)
 
 
