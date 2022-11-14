@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.2.2](https://github.com/rowanmanning/list-all-files/compare/v2.2.1...v2.2.2) (2022-11-14)
+
+
+### Bug Fixes
+
+* improve TypeScript compatibility ([ffb11a1](https://github.com/rowanmanning/list-all-files/commit/ffb11a1579cdc091b0dae9f60e5fbf1c25c235cb))
+
 ## [2.2.1](https://github.com/rowanmanning/list-all-files/compare/v2.2.0...v2.2.1) (2022-07-09)
 
 
