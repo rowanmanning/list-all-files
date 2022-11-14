@@ -102,6 +102,12 @@ describe('lib/list-all-files', () => {
 
 	});
 
+	describe('.default', () => {
+		it('aliases the module exports', () => {
+			assert.strictEqual(listAllFiles, listAllFiles.default);
+		});
+	});
+
 });
 
 /**
