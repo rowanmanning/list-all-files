@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.2.3](https://github.com/rowanmanning/list-all-files/compare/v2.2.2...v2.2.3) (2023-01-07)
+
+
+### Bug Fixes
+
+* bump json5 from 2.2.1 to 2.2.3 ([8992f08](https://github.com/rowanmanning/list-all-files/commit/8992f08f118dd80f0dc99c56281f84fd00ffe716))
+
 ## [2.2.2](https://github.com/rowanmanning/list-all-files/compare/v2.2.1...v2.2.2) (2022-11-14)
 
 
