@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.2.4](https://github.com/rowanmanning/list-all-files/compare/v2.2.3...v2.2.4) (2023-02-14)
+
+
+### Bug Fixes
+
+* support npm v9 ([e137ab9](https://github.com/rowanmanning/list-all-files/commit/e137ab90394a703bb3d909e15ce5876e47c2c40a))
+
 ## [2.2.3](https://github.com/rowanmanning/list-all-files/compare/v2.2.2...v2.2.3) (2023-01-07)
 
 
