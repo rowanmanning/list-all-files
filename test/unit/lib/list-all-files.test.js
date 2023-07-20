@@ -10,8 +10,8 @@ describe('lib/list-all-files', () => {
 	let listAllFiles;
 
 	beforeEach(() => {
-		fs = td.replace('fs');
-		fsPromises = td.replace('fs/promises');
+		fs = td.replace('node:fs');
+		fsPromises = td.replace('node:fs/promises');
 		createMockFileSystem(fs, fsPromises);
 		listAllFiles = require('../../../lib/list-all-files');
 	});
