@@ -1,6 +1,6 @@
 'use strict';
 
-const {assert} = require('chai');
+const assert = require('node:assert');
 const td = require('testdouble');
 
 // Note: mock file system is constructed in a function below the tests
@@ -17,7 +17,7 @@ describe('lib/list-all-files', () => {
 	});
 
 	it('exports a function', () => {
-		assert.isFunction(listAllFiles);
+		assert.strictEqual(typeof listAllFiles, 'function');
 	});
 
 	describe('listAllFiles(directoryPath)', () => {
@@ -30,11 +30,11 @@ describe('lib/list-all-files', () => {
 		});
 
 		it('returns a promise', () => {
-			assert.instanceOf(returnValue, Promise);
+			assert.ok(returnValue instanceof Promise);
 		});
 
 		it('resolves with an array of file names, ignoring directories and non-files', () => {
-			assert.isArray(resolvedValue);
+			assert.ok(Array.isArray(resolvedValue));
 			assert.deepEqual(resolvedValue, [
 				'mock-dir/mock-subdir-1/mock-subdir-2/mock-file-4',
 				'mock-dir/mock-subdir-1/mock-file-3',
@@ -72,7 +72,7 @@ describe('lib/list-all-files', () => {
 		});
 
 		it('returns an array of file names, ignoring directories and non-files', () => {
-			assert.isArray(returnValue);
+			assert.ok(Array.isArray(returnValue));
 			assert.deepEqual(returnValue, [
 				'mock-dir/mock-subdir-1/mock-subdir-2/mock-file-4',
 				'mock-dir/mock-subdir-1/mock-file-3',
