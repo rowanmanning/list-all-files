@@ -3,37 +3,9 @@
 ## 3.0.3 (2023-07-25)
 
 
-### ⚠ BREAKING CHANGES
-
-* drop official support for npm v7
-* drop support for Node.js 14
-
-### Features
-
-* ensure typescript types are always valid ([6ad39ef](https://github.com/rowanmanning/list-all-files/commit/6ad39ef6946088865ebafe4b1c865cb493f64018))
-
-
 ### Bug Fixes
 
-* add support for Node.js 20 ([9bca5db](https://github.com/rowanmanning/list-all-files/commit/9bca5dbb81a420d966228e923ffeda87b676638a))
-* bump json5 from 2.2.1 to 2.2.3 ([8992f08](https://github.com/rowanmanning/list-all-files/commit/8992f08f118dd80f0dc99c56281f84fd00ffe716))
-* correct mocked modules ([ca0f789](https://github.com/rowanmanning/list-all-files/commit/ca0f789a6d6aa58bcf34089988d6e78c1f3020d5))
-* hide the misc changelog section ([5ed569f](https://github.com/rowanmanning/list-all-files/commit/5ed569f14276f864bf91245cba5d424f8f70a9e4))
-* improve TypeScript compatibility ([ffb11a1](https://github.com/rowanmanning/list-all-files/commit/ffb11a1579cdc091b0dae9f60e5fbf1c25c235cb))
-* sort out broken releases ([5f8d2d8](https://github.com/rowanmanning/list-all-files/commit/5f8d2d8750d235e4fdc87d0f788c6f633f264cae))
-* support npm v9 ([e137ab9](https://github.com/rowanmanning/list-all-files/commit/e137ab90394a703bb3d909e15ce5876e47c2c40a))
-* use node-prefixed modules ([94db276](https://github.com/rowanmanning/list-all-files/commit/94db2766d0526ab456e486167cb36385a9957be5))
-
-
-### Documentation Changes
-
-* manually define changelog sections ([71bd3d7](https://github.com/rowanmanning/list-all-files/commit/71bd3d74f118b5b75390943478e8b21222a30f3f))
-
-
-### Miscellaneous
-
-* drop official support for npm v7 ([9e30cd6](https://github.com/rowanmanning/list-all-files/commit/9e30cd6564ebc460e777c364169abcef72f05b82))
-* drop support for Node.js 14 ([a3c63df](https://github.com/rowanmanning/list-all-files/commit/a3c63df127e7a640d913c1e8b2c2d8a430345a83))
+* sort out broken releases
 
 ## [3.0.1](https://github.com/rowanmanning/list-all-files/compare/v3.0.0...v3.0.1) (2023-04-18)
 
