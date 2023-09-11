@@ -1,5 +1,16 @@
 # Changelog
 
+## [4.0.0](https://github.com/rowanmanning/list-all-files/compare/v3.0.3...v4.0.0) (2023-09-11)
+
+
+### ⚠ BREAKING CHANGES
+
+* drop support for Node.js 16
+
+### Miscellaneous
+
+* drop support for Node.js 16 ([4ca73e6](https://github.com/rowanmanning/list-all-files/commit/4ca73e68a536e4a20c197354455242a439cca91a))
+
 ## 3.0.3 (2023-07-25)
 
 
