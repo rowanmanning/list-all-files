@@ -16,7 +16,7 @@ List all files in a directory recursively.
 
 This library requires the following to run:
 
-  * [Node.js](https://nodejs.org/) 16+
+  * [Node.js](https://nodejs.org/) 18+
 
 
 ## Usage
