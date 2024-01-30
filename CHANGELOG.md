@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.1.0](https://github.com/rowanmanning/list-all-files/compare/v4.0.0...v4.1.0) (2024-01-30)
+
+
+### Features
+
+* add official support for npm 10 ([c369ec7](https://github.com/rowanmanning/list-all-files/commit/c369ec7ccc131deb34e90dbea9457ed10d21d7c9))
+
 ## [4.0.0](https://github.com/rowanmanning/list-all-files/compare/v3.0.3...v4.0.0) (2023-09-11)
 
 
