@@ -1,6 +1,7 @@
 'use strict';
 
 const assert = require('node:assert');
+const {beforeEach, describe, it} = require('node:test');
 const listAllFiles = require('../..');
 
 describe('listAllFiles(directoryPath)', () => {

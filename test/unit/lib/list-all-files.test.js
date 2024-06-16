@@ -1,7 +1,10 @@
 'use strict';
 
 const assert = require('node:assert');
+const {afterEach, beforeEach, describe, it} = require('node:test');
 const td = require('testdouble');
+
+td.config({ignoreWarnings: true});
 
 // Note: mock file system is constructed in a function below the tests
 describe('lib/list-all-files', () => {
@@ -14,6 +17,10 @@ describe('lib/list-all-files', () => {
 		fsPromises = td.replace('node:fs/promises');
 		createMockFileSystem(fs, fsPromises);
 		listAllFiles = require('../../../lib/list-all-files');
+	});
+
+	afterEach(() => {
+		td.reset();
 	});
 
 	it('exports a function', () => {
