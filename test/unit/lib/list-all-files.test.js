@@ -1,10 +1,10 @@
 'use strict';
 
 const assert = require('node:assert');
-const {afterEach, beforeEach, describe, it} = require('node:test');
+const { afterEach, beforeEach, describe, it } = require('node:test');
 const td = require('testdouble');
 
-td.config({ignoreWarnings: true});
+td.config({ ignoreWarnings: true });
 
 // Note: mock file system is constructed in a function below the tests
 describe('lib/list-all-files', () => {
@@ -52,23 +52,26 @@ describe('lib/list-all-files', () => {
 
 		it('reads the directory and all subdirectories', () => {
 			assert.strictEqual(td.explain(fsPromises.readdir).callCount, 3);
-			td.verify(fsPromises.readdir('mock-dir'), {times: 1});
-			td.verify(fsPromises.readdir('mock-dir/mock-subdir-1'), {times: 1});
-			td.verify(fsPromises.readdir('mock-dir/mock-subdir-1/mock-subdir-2'), {times: 1});
+			td.verify(fsPromises.readdir('mock-dir'), { times: 1 });
+			td.verify(fsPromises.readdir('mock-dir/mock-subdir-1'), { times: 1 });
+			td.verify(fsPromises.readdir('mock-dir/mock-subdir-1/mock-subdir-2'), { times: 1 });
 		});
 
 		it('stats each of the found file system entries', () => {
 			assert.strictEqual(td.explain(fsPromises.stat).callCount, 8);
-			td.verify(fsPromises.stat('mock-dir/mock-subdir-1'), {times: 1});
-			td.verify(fsPromises.stat('mock-dir/mock-not-file-1'), {times: 1});
-			td.verify(fsPromises.stat('mock-dir/mock-file-1'), {times: 1});
-			td.verify(fsPromises.stat('mock-dir/mock-file-2'), {times: 1});
-			td.verify(fsPromises.stat('mock-dir/mock-subdir-1/mock-subdir-2'), {times: 1});
-			td.verify(fsPromises.stat('mock-dir/mock-subdir-1/mock-file-3'), {times: 1});
-			td.verify(fsPromises.stat('mock-dir/mock-subdir-1/mock-subdir-2/mock-not-file-2'), {times: 1});
-			td.verify(fsPromises.stat('mock-dir/mock-subdir-1/mock-subdir-2/mock-file-4'), {times: 1});
+			td.verify(fsPromises.stat('mock-dir/mock-subdir-1'), { times: 1 });
+			td.verify(fsPromises.stat('mock-dir/mock-not-file-1'), { times: 1 });
+			td.verify(fsPromises.stat('mock-dir/mock-file-1'), { times: 1 });
+			td.verify(fsPromises.stat('mock-dir/mock-file-2'), { times: 1 });
+			td.verify(fsPromises.stat('mock-dir/mock-subdir-1/mock-subdir-2'), { times: 1 });
+			td.verify(fsPromises.stat('mock-dir/mock-subdir-1/mock-file-3'), { times: 1 });
+			td.verify(fsPromises.stat('mock-dir/mock-subdir-1/mock-subdir-2/mock-not-file-2'), {
+				times: 1
+			});
+			td.verify(fsPromises.stat('mock-dir/mock-subdir-1/mock-subdir-2/mock-file-4'), {
+				times: 1
+			});
 		});
-
 	});
 
 	describe('listAllFiles.sync(directoryPath)', () => {
@@ -90,23 +93,26 @@ describe('lib/list-all-files', () => {
 
 		it('reads the directory and all subdirectories', () => {
 			assert.strictEqual(td.explain(fs.readdirSync).callCount, 3);
-			td.verify(fs.readdirSync('mock-dir'), {times: 1});
-			td.verify(fs.readdirSync('mock-dir/mock-subdir-1'), {times: 1});
-			td.verify(fs.readdirSync('mock-dir/mock-subdir-1/mock-subdir-2'), {times: 1});
+			td.verify(fs.readdirSync('mock-dir'), { times: 1 });
+			td.verify(fs.readdirSync('mock-dir/mock-subdir-1'), { times: 1 });
+			td.verify(fs.readdirSync('mock-dir/mock-subdir-1/mock-subdir-2'), { times: 1 });
 		});
 
 		it('stats each of the found file system entries', () => {
 			assert.strictEqual(td.explain(fs.statSync).callCount, 8);
-			td.verify(fs.statSync('mock-dir/mock-subdir-1'), {times: 1});
-			td.verify(fs.statSync('mock-dir/mock-not-file-1'), {times: 1});
-			td.verify(fs.statSync('mock-dir/mock-file-1'), {times: 1});
-			td.verify(fs.statSync('mock-dir/mock-file-2'), {times: 1});
-			td.verify(fs.statSync('mock-dir/mock-subdir-1/mock-subdir-2'), {times: 1});
-			td.verify(fs.statSync('mock-dir/mock-subdir-1/mock-file-3'), {times: 1});
-			td.verify(fs.statSync('mock-dir/mock-subdir-1/mock-subdir-2/mock-not-file-2'), {times: 1});
-			td.verify(fs.statSync('mock-dir/mock-subdir-1/mock-subdir-2/mock-file-4'), {times: 1});
+			td.verify(fs.statSync('mock-dir/mock-subdir-1'), { times: 1 });
+			td.verify(fs.statSync('mock-dir/mock-not-file-1'), { times: 1 });
+			td.verify(fs.statSync('mock-dir/mock-file-1'), { times: 1 });
+			td.verify(fs.statSync('mock-dir/mock-file-2'), { times: 1 });
+			td.verify(fs.statSync('mock-dir/mock-subdir-1/mock-subdir-2'), { times: 1 });
+			td.verify(fs.statSync('mock-dir/mock-subdir-1/mock-file-3'), { times: 1 });
+			td.verify(fs.statSync('mock-dir/mock-subdir-1/mock-subdir-2/mock-not-file-2'), {
+				times: 1
+			});
+			td.verify(fs.statSync('mock-dir/mock-subdir-1/mock-subdir-2/mock-file-4'), {
+				times: 1
+			});
 		});
-
 	});
 
 	describe('.default', () => {
@@ -114,7 +120,6 @@ describe('lib/list-all-files', () => {
 			assert.strictEqual(listAllFiles, listAllFiles.default);
 		});
 	});
-
 });
 
 /**
@@ -126,20 +131,9 @@ describe('lib/list-all-files', () => {
  *     The promise-based file system module.
  */
 function createMockFileSystem(fs, fsPromises) {
-	const mockDirectory1 = [
-		'mock-subdir-1',
-		'mock-not-file-1',
-		'mock-file-1',
-		'mock-file-2'
-	];
-	const mockDirectory2 = [
-		'mock-subdir-2',
-		'mock-file-3'
-	];
-	const mockDirectory3 = [
-		'mock-not-file-2',
-		'mock-file-4'
-	];
+	const mockDirectory1 = ['mock-subdir-1', 'mock-not-file-1', 'mock-file-1', 'mock-file-2'];
+	const mockDirectory2 = ['mock-subdir-2', 'mock-file-3'];
+	const mockDirectory3 = ['mock-not-file-2', 'mock-file-4'];
 
 	// Create a mock async file system.
 	td.when(fsPromises.readdir('mock-dir')).thenResolve(mockDirectory1);
@@ -149,10 +143,18 @@ function createMockFileSystem(fs, fsPromises) {
 	td.when(fsPromises.stat('mock-dir/mock-not-file-1')).thenResolve(createMockStat(false, false));
 	td.when(fsPromises.stat('mock-dir/mock-file-1')).thenResolve(createMockStat(false, true));
 	td.when(fsPromises.stat('mock-dir/mock-file-2')).thenResolve(createMockStat(false, true));
-	td.when(fsPromises.stat('mock-dir/mock-subdir-1/mock-subdir-2')).thenResolve(createMockStat(true, false));
-	td.when(fsPromises.stat('mock-dir/mock-subdir-1/mock-file-3')).thenResolve(createMockStat(false, true));
-	td.when(fsPromises.stat('mock-dir/mock-subdir-1/mock-subdir-2/mock-not-file-2')).thenResolve(createMockStat(false, false));
-	td.when(fsPromises.stat('mock-dir/mock-subdir-1/mock-subdir-2/mock-file-4')).thenResolve(createMockStat(false, true));
+	td.when(fsPromises.stat('mock-dir/mock-subdir-1/mock-subdir-2')).thenResolve(
+		createMockStat(true, false)
+	);
+	td.when(fsPromises.stat('mock-dir/mock-subdir-1/mock-file-3')).thenResolve(
+		createMockStat(false, true)
+	);
+	td.when(fsPromises.stat('mock-dir/mock-subdir-1/mock-subdir-2/mock-not-file-2')).thenResolve(
+		createMockStat(false, false)
+	);
+	td.when(fsPromises.stat('mock-dir/mock-subdir-1/mock-subdir-2/mock-file-4')).thenResolve(
+		createMockStat(false, true)
+	);
 
 	// Create a mock sync file system.
 	td.when(fs.readdirSync('mock-dir')).thenReturn(mockDirectory1);
@@ -162,10 +164,18 @@ function createMockFileSystem(fs, fsPromises) {
 	td.when(fs.statSync('mock-dir/mock-not-file-1')).thenReturn(createMockStat(false, false));
 	td.when(fs.statSync('mock-dir/mock-file-1')).thenReturn(createMockStat(false, true));
 	td.when(fs.statSync('mock-dir/mock-file-2')).thenReturn(createMockStat(false, true));
-	td.when(fs.statSync('mock-dir/mock-subdir-1/mock-subdir-2')).thenReturn(createMockStat(true, false));
-	td.when(fs.statSync('mock-dir/mock-subdir-1/mock-file-3')).thenReturn(createMockStat(false, true));
-	td.when(fs.statSync('mock-dir/mock-subdir-1/mock-subdir-2/mock-not-file-2')).thenReturn(createMockStat(false, false));
-	td.when(fs.statSync('mock-dir/mock-subdir-1/mock-subdir-2/mock-file-4')).thenReturn(createMockStat(false, true));
+	td.when(fs.statSync('mock-dir/mock-subdir-1/mock-subdir-2')).thenReturn(
+		createMockStat(true, false)
+	);
+	td.when(fs.statSync('mock-dir/mock-subdir-1/mock-file-3')).thenReturn(
+		createMockStat(false, true)
+	);
+	td.when(fs.statSync('mock-dir/mock-subdir-1/mock-subdir-2/mock-not-file-2')).thenReturn(
+		createMockStat(false, false)
+	);
+	td.when(fs.statSync('mock-dir/mock-subdir-1/mock-subdir-2/mock-file-4')).thenReturn(
+		createMockStat(false, true)
+	);
 }
 
 /**
