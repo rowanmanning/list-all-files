@@ -1,5 +1,17 @@
 # Changelog
 
+## [4.2.0](https://github.com/rowanmanning/list-all-files/compare/v4.1.0...v4.2.0) (2024-06-23)
+
+
+### Features
+
+* add Node.js 22 support ([e580c14](https://github.com/rowanmanning/list-all-files/commit/e580c14eee4b1385d82fd2c672bffd9d22e3cf1f))
+
+
+### Documentation Changes
+
+* add a future deprecation warning ([9e53b29](https://github.com/rowanmanning/list-all-files/commit/9e53b294b249299a238bd3b2bd313c24d3058ce2))
+
 ## [4.1.0](https://github.com/rowanmanning/list-all-files/compare/v4.0.0...v4.1.0) (2024-01-30)
 
 
