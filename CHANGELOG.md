@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.2.1](https://github.com/rowanmanning/list-all-files/compare/v4.2.0...v4.2.1) (2024-07-27)
+
+
+### Bug Fixes
+
+* prevent husky from failing ([ab4eab9](https://github.com/rowanmanning/list-all-files/commit/ab4eab90edf8c408d9fa3e923779d6040a88d68f))
+
 ## [4.2.0](https://github.com/rowanmanning/list-all-files/compare/v4.1.0...v4.2.0) (2024-06-23)
 
 
