@@ -14,6 +14,7 @@ const path = require('node:path');
  *     Resolves with an array of strings, each string is a file path.
  */
 async function listAllFiles(directoryPath) {
+	/** @type {string[]} */
 	let filePaths = [];
 	for (const filePath of await readdir(directoryPath)) {
 		const fullPath = path.join(directoryPath, filePath);
@@ -37,6 +38,7 @@ async function listAllFiles(directoryPath) {
  *     Returns an array of strings, each string is a file path.
  */
 function listAllFilesSync(directoryPath) {
+	/** @type {string[]} */
 	let filePaths = [];
 	for (const filePath of readdirSync(directoryPath)) {
 		const fullPath = path.join(directoryPath, filePath);
@@ -50,6 +52,8 @@ function listAllFilesSync(directoryPath) {
 	return filePaths;
 }
 
-module.exports = listAllFiles;
-module.exports.sync = listAllFilesSync;
-module.exports.default = module.exports;
+let _exports = Object.assign(listAllFiles, { sync: listAllFilesSync });
+_exports = Object.assign(_exports, { default: _exports });
+
+/** @type {typeof _exports} */
+module.exports = _exports;
