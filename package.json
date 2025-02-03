@@ -39,7 +39,7 @@
     "testdouble": "^3.20.2",
     "typescript": "^5.5.2"
   },
-  "main": "lib/list-all-files.js",
+  "main": "index.js",
   "nyc": {
     "eager": true,
     "reporter": [

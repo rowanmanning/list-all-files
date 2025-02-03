@@ -7,7 +7,7 @@ const td = require('testdouble');
 td.config({ ignoreWarnings: true });
 
 // Note: mock file system is constructed in a function below the tests
-describe('lib/list-all-files', () => {
+describe('list-all-files', () => {
 	let fs;
 	let fsPromises;
 	let listAllFiles;
@@ -16,7 +16,7 @@ describe('lib/list-all-files', () => {
 		fs = td.replace('node:fs');
 		fsPromises = td.replace('node:fs/promises');
 		createMockFileSystem(fs, fsPromises);
-		listAllFiles = require('../../../lib/list-all-files');
+		listAllFiles = require('../..');
 	});
 
 	afterEach(() => {
