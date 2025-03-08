@@ -1,6 +1,6 @@
 {
   "name": "@rowanmanning/list-all-files",
-  "version": "4.2.1",
+  "version": "5.0.0",
   "description": "List all files in a directory",
   "keywords": [
     "fs",

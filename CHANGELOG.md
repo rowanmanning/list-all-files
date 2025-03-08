@@ -1,5 +1,22 @@
 # Changelog
 
+## [5.0.0](https://github.com/rowanmanning/list-all-files/compare/v4.2.1...v5.0.0) (2025-03-08)
+
+
+### ⚠ BREAKING CHANGES
+
+* move to named exports
+* drop Node.js 18
+
+### Miscellaneous Chores
+
+* drop Node.js 18 ([73cd2a3](https://github.com/rowanmanning/list-all-files/commit/73cd2a31bfc01e2c55d20c253f8c7db7ccb6efc5))
+
+
+### Code Refactoring
+
+* move to named exports ([4fac9eb](https://github.com/rowanmanning/list-all-files/commit/4fac9ebcc723dd0070100ff75e9255f2bbabfb90))
+
 ## [4.2.1](https://github.com/rowanmanning/list-all-files/compare/v4.2.0...v4.2.1) (2024-07-27)
 
 
