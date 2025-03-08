@@ -2,7 +2,7 @@
 
 const assert = require('node:assert');
 const { beforeEach, describe, it } = require('node:test');
-const listAllFiles = require('../..');
+const { listAllFiles, listAllFilesSync } = require('../..');
 
 describe('listAllFiles(directoryPath)', () => {
 	let resolvedValue;
@@ -21,11 +21,11 @@ describe('listAllFiles(directoryPath)', () => {
 	});
 });
 
-describe('listAllFiles.sync(directoryPath)', () => {
+describe('listAllFilesSync(directoryPath)', () => {
 	let returnValue;
 
 	beforeEach(() => {
-		returnValue = listAllFiles.sync(`${__dirname}/fixture/main`);
+		returnValue = listAllFilesSync(`${__dirname}/fixture/main`);
 	});
 
 	it('returns the expected file paths', () => {

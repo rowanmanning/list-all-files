@@ -13,7 +13,7 @@ const path = require('node:path');
  * @returns {Promise<string[]>}
  *     Resolves with an array of strings, each string is a file path.
  */
-async function listAllFiles(directoryPath) {
+exports.listAllFiles = async function listAllFiles(directoryPath) {
 	/** @type {string[]} */
 	let filePaths = [];
 	for (const filePath of await readdir(directoryPath)) {
@@ -26,7 +26,7 @@ async function listAllFiles(directoryPath) {
 		}
 	}
 	return filePaths;
-}
+};
 
 /**
  * List all files in a directory recursively and synchronously.
@@ -37,7 +37,7 @@ async function listAllFiles(directoryPath) {
  * @returns {string[]}
  *     Returns an array of strings, each string is a file path.
  */
-function listAllFilesSync(directoryPath) {
+exports.listAllFilesSync = function listAllFilesSync(directoryPath) {
 	/** @type {string[]} */
 	let filePaths = [];
 	for (const filePath of readdirSync(directoryPath)) {
@@ -50,10 +50,4 @@ function listAllFilesSync(directoryPath) {
 		}
 	}
 	return filePaths;
-}
-
-let _exports = Object.assign(listAllFiles, { sync: listAllFilesSync });
-_exports = Object.assign(_exports, { default: _exports });
-
-/** @type {typeof _exports} */
-module.exports = _exports;
+};

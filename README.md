@@ -30,13 +30,13 @@ Install with [npm](https://www.npmjs.com/):
 npm install @rowanmanning/list-all-files
 ```
 
-Load the library into your code with a `require` call:
+### Asynchronous Interface
+
+Load the library into your code with `require`:
 
 ```js
-const listAllFiles = require('@rowanmanning/list-all-files');
+const { listAllFiles } = require('@rowanmanning/list-all-files');
 ```
-
-### Asynchronous Interface
 
 List all files in a directory asynchronously, using promises or `async`/`await`:
 
@@ -55,10 +55,16 @@ const files = await listAllFiles('./directory-path');
 
 ### Synchronous Interface
 
+Load the library into your code with `require`:
+
+```js
+const { listAllFilesSync } = require('@rowanmanning/list-all-files');
+```
+
 List all files in a directory synchronously:
 
 ```js
-const files = listAllFiles.sync('./directory-path');
+const files = listAllFilesSync('./directory-path');
 // files is an array of strings, each being the path to a file
 ```
 

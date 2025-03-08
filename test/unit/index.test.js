@@ -11,20 +11,19 @@ describe('list-all-files', () => {
 	let fs;
 	let fsPromises;
 	let listAllFiles;
+	let listAllFilesSync;
 
 	beforeEach(() => {
 		fs = td.replace('node:fs');
 		fsPromises = td.replace('node:fs/promises');
 		createMockFileSystem(fs, fsPromises);
-		listAllFiles = require('../..');
+		const subject = require('../..');
+		listAllFiles = subject.listAllFiles;
+		listAllFilesSync = subject.listAllFilesSync;
 	});
 
 	afterEach(() => {
 		td.reset();
-	});
-
-	it('exports a function', () => {
-		assert.strictEqual(typeof listAllFiles, 'function');
 	});
 
 	describe('listAllFiles(directoryPath)', () => {
@@ -74,11 +73,11 @@ describe('list-all-files', () => {
 		});
 	});
 
-	describe('listAllFiles.sync(directoryPath)', () => {
+	describe('listAllFilesSync(directoryPath)', () => {
 		let returnValue;
 
 		beforeEach(() => {
-			returnValue = listAllFiles.sync('mock-dir');
+			returnValue = listAllFilesSync('mock-dir');
 		});
 
 		it('returns an array of file names, ignoring directories and non-files', () => {
@@ -112,12 +111,6 @@ describe('list-all-files', () => {
 			td.verify(fs.statSync('mock-dir/mock-subdir-1/mock-subdir-2/mock-file-4'), {
 				times: 1
 			});
-		});
-	});
-
-	describe('.default', () => {
-		it('aliases the module exports', () => {
-			assert.strictEqual(listAllFiles, listAllFiles.default);
 		});
 	});
 });
