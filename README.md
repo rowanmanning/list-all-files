@@ -6,13 +6,13 @@ List all files in a directory recursively.
 > [!WARNING]
 > This library will be deprecated in April 2026 to coincide with the end-of-life date for Node.js 20. This is because the native [`fs.glob`](https://nodejs.org/api/fs.html#fspromisesglobpattern-options) and [`fs.globSync`](https://nodejs.org/api/fs.html#fsglobsyncpattern-options) methods in Node.js 22 and above provide the same functionality.
 
-
-## Table of Contents
-
-  * [Requirements](#requirements)
-  * [Usage](#usage)
-  * [Contributing](#contributing)
-  * [License](#license)
+* [Requirements](#requirements)
+* [Usage](#usage)
+  * [Asynchronous Interface](#asynchronous-interface)
+  * [Synchronous Interface](#synchronous-interface)
+* [Migration](#migration)
+* [Contributing](#contributing)
+* [License](#license)
 
 
 ## Requirements
@@ -61,6 +61,11 @@ List all files in a directory synchronously:
 const files = listAllFiles.sync('./directory-path');
 // files is an array of strings, each being the path to a file
 ```
+
+
+## Migration
+
+A new major version of this project is released if breaking changes are introduced. We maintain a [migration guide](docs/migration.md) to help users migrate between these versions.
 
 
 ## Contributing
