@@ -4,7 +4,7 @@
 List all files in a directory recursively.
 
 > [!WARNING]
-> This library will be deprecated in April 2026 to coincide with the end-of-life date for Node.js 20. This is because the native [`fs.glob`](https://nodejs.org/api/fs.html#fspromisesglobpattern-options) and [`fs.globSync`](https://nodejs.org/api/fs.html#fsglobsyncpattern-options) methods in Node.js 22 and above provide the same functionality.
+> This library has been deprecated in favour of the native [`fs.glob`](https://nodejs.org/api/fs.html#fspromisesglobpattern-options) and [`fs.globSync`](https://nodejs.org/api/fs.html#fsglobsyncpattern-options) functions available in Node.js 22+.
 
 * [Requirements](#requirements)
 * [Usage](#usage)
